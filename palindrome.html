@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome</title>
+</head>
+<body>
+    <h1>Palidrome</h1>
+    <input type="text" id="word">
+    <span></span>
+<script>
+    const enterName = document.querySelector('input')
+    const spa = document.querySelector('span')
+
+    enterName.addEventListener('change', (e) =>{
+            e.preventDefault()
+
+        //create a regex that checks for letters and numbers only
+        const regex = /[a-z0-9]/g
+        const text = (enterName.value).toLowerCase()
+
+        //match the regex on the text string
+        const matchRegex = text.match(regex)
+
+        //match a copy of the array and reverse it 
+        const reverseMatch = [...matchRegex].reverse()
+
+        //convert the two arrays to string and see if they are the same
+        const result = matchRegex.join('') == reverseMatch.join('')
+
+        //display the result on the span element 
+        spa.textcontent = result ? spa.textContent= 'this is a palidrome' : spa.textContent = 'is not a palidrome'
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+const define = ' computer is an electronic device that takes data as input and returns information'
+undefined
+const defRegex = /electronic/
+undefined
+defRegex
+/electronic/
+const defRegex = /electronic/
+undefined
+define.match(defRegex)
+['electronic', index: 16, input: ' computer is an electronic device that takes data as input and returns information', groups: undefined]
+define
+' computer is an electronic device that takes data as input and returns information'
+defRegex.test(define)
+true
+const define = ' computer is an electronic device that takes data as input and returns information as an output'
+undefined
+const defRegex = /As/ig
+undefined
+define.match(defRegex)
+(2) ['as', 'as']
+defRegex.test(define)
+true
+const defRegex = /device|input|output|process|machine/ig
+undefined
+define.match(defRegex)
+(3) ['device', 'input', 'output']
+defRegex.test(define)
+true
+const vRegex =/[aeiou]/
+undefined
+define.match(vRegex)
+['o', index: 2, input: ' computer is an electronic device that takes data as input and returns information as an output', groups: undefined]
+const vRegex =/[aeiou]/ig
+undefined
+define.match(vRegex)
+(33) ['o', 'u', 'e', 'i', 'a', 'e', 'e', 'o', 'i', 'e', 'i', 'e', 'a', 'a', 'e', 'a', 'a', 'a', 'i', 'u', 'a', 'e', 'u', 'i', 'o', 'a', 'i', 'o', 'a', 'a', 'o', 'u', 'u']
+define.match(vRegex).length
+33
+const letterRegex = /[a-z]/
+undefined
+define.match(letterRegex)
+['c', index: 1, input: ' computer is an electronic device that takes data as input and returns information as an output', groups: undefined]
+const letterRegex = /[a-z]/g
+undefined
+define.match(letterRegex)
+(79) ['c', 'o', 'm', 'p', 'u', 't', 'e', 'r', 'i', 's', 'a', 'n', 'e', 'l', 'e', 'c', 't', 'r', 'o', 'n', 'i', 'c', 'd', 'e', 'v', 'i', 'c', 'e', 't', 'h', 'a', 't', 't', 'a', 'k', 'e', 's', 'd', 'a', 't', 'a', 'a', 's', 'i', 'n', 'p', 'u', 't', 'a', 'n', 'd', 'r', 'e', 't', 'u', 'r', 'n', 's', 'i', 'n', 'f', 'o', 'r', 'm', 'a', 't', 'i', 'o', 'n', 'a', 's', 'a', 'n', 'o', 'u', 't', 'p', 'u', 't']
+const define = ' COMPUTER is an electronic device that takes data as input and returns information as an output'
+undefined
+const letterRegex = /[a-zA-z]/g
+undefined
+define.match(letterRegex)
+(79) ['C', 'O', 'M', 'P', 'U', 'T', 'E', 'R', 'i', 's', 'a', 'n', 'e', 'l', 'e', 'c', 't', 'r', 'o', 'n', 'i', 'c', 'd', 'e', 'v', 'i', 'c', 'e', 't', 'h', 'a', 't', 't', 'a', 'k', 'e', 's', 'd', 'a', 't', 'a', 'a', 's', 'i', 'n', 'p', 'u', 't', 'a', 'n', 'd', 'r', 'e', 't', 'u', 'r', 'n', 's', 'i', 'n', 'f', 'o', 'r', 'm', 'a', 't', 'i', 'o', 'n', 'a', 's', 'a', 'n', 'o', 'u', 't', 'p', 'u', 't']

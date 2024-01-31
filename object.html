@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object constructor</title>
+</head>
+<body>
+    <h1>Object constructor</h1>
+    <input type="text" id="word">
+    <span></span>
+    <script>
+        //constructor function
+        // function teacher(name, age, course){
+        //     this.name = name
+        //     this.age = age
+        //     this.course = course
+        // }
+
+        // let teacher1 = new teacher('Mubby', 34, 'frontend')
+        // let teacher2 = new teacher('Mubby', 44, 'backend')
+
+        //constructor function
+        // function Rectangle(length, width){
+        //     this.length = length
+        //     this.width = width
+        //     this.perimeter = function(){
+        //         console.log(2* (this.length + this.width))
+        //     }
+        // }
+
+        // let rect1 = new Rectangle(4,5)
+        // let rect2 = new Rectangle(5,6)
+
+        const enterName = document.querySelector('input')
+        const spa = document.querySelector('span')
+
+        enterName.addEventListener('change', (e) =>{
+            e.preventDefault()
+            const regex = /[a-zA-Z0-9]/ig;
+            const val = enterName.value.match(regex)
+            console.log(val)   
+            const toString = enterName.value.match(regex).toString().split("")
+            console.log(toString.reverse())
+            const match = toString.toString() == toString.reverse().toString()
+            console.log(match)
+            spa.textContent = match ? spa.textContent = 'This is a palindrome' : spa.textContent ='Not a palidrome'
+        })
+    </script>
+</body>
+</html>
