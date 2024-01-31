@@ -10,9 +10,11 @@
     <input type="text" id="word">
     <span></span>
 <script>
+    //define variable
     const enterName = document.querySelector('input')
     const spa = document.querySelector('span')
-
+    
+    //conditional
     enterName.addEventListener('change', (e) =>{
             e.preventDefault()
 
@@ -25,9 +27,11 @@
 
         //match a copy of the array and reverse it 
         const reverseMatch = [...matchRegex].reverse()
+        console.log(reverseMatch)
 
         //convert the two arrays to string and see if they are the same
         const result = matchRegex.join('') == reverseMatch.join('')
+        console.log(result)
 
         //display the result on the span element 
         spa.textcontent = result ? spa.textContent= 'this is a palidrome' : spa.textContent = 'is not a palidrome'
